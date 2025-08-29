@@ -11,10 +11,14 @@ A Domain-Driven Design implementation combining Customer Booking and Admin Porta
 
 ## Quick Start
 
-### 1. Install Dependencies
+### 1. Setup Virtual Environment and Install Dependencies
 ```bash
-pip install -r requirements.txt
-```
+
+
+# Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+uvicorn src.api.main:app --reload
 
 ### 2. Seed Demo Data
 ```bash
@@ -28,8 +32,7 @@ python unified_demo.py
 
 ### 4. Run API Server (with auto-seeded data)
 ```bash
-cd src
-uvicorn api.main:app --reload
+uvicorn src.api.main:app --reload
 ```
 
 ## API Endpoints
