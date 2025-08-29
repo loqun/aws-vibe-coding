@@ -41,6 +41,11 @@ cd construction/customer_booking
 # Install dependencies
 pip install -r requirements.txt
 
+# Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+
 # Seed demo data
 python migrate_demo.py
 
@@ -48,8 +53,7 @@ python migrate_demo.py
 python unified_demo.py
 
 # Start API server (with auto-seeded data)
-cd src
-uvicorn api.main:app --reload
+uvicorn src.api.main:app --reload
 ```
 
 ### Frontend Setup
